@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate PDF</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        {{ template "styles.css" }}
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="description">
+        <h1>Section 1: Best buys in Toa Payoh</h1>
+    </div>
+
+    {{range .properties}}
+    <div class="block">
+        <div class="row">
+            <span>{{.name}}</span>
+            <span>{{.Price}}</span>
+        </div>
+        <div class="row">
+            <span>{{.details}}</span>
+            <span>{{.area}}</span>
+        </div>
+    </div>
+    {{end}}
+</div>
+
+<script>
+    {{ template "script.js" }}
+</script>
+</body>
+</html>

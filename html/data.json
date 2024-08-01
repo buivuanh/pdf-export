@@ -1,0 +1,64 @@
+{
+  "properties": [
+    {
+      "name": "Property 1",
+      "price": "$500,000",
+      "details": "3 Beds, 2 Baths",
+      "area": "1234 Sq Ft"
+    },
+    {
+      "name": "Property 2",
+      "price": "$750,000",
+      "details": "4 Beds, 3 Baths",
+      "area": "2000 Sq Ft"
+    },
+    {
+      "name": "Property 3",
+      "price": "$1,200,000",
+      "details": "5 Beds, 4 Baths",
+      "area": "3500 Sq Ft"
+    },
+    {
+      "name": "Property 4",
+      "price": "$2,200,000",
+      "details": "2 Beds, 1 Bath",
+      "area": "350 Sq Ft"
+    },
+    {
+      "name": "Property 5",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    },
+    {
+      "name": "Property 6",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    },
+    {
+      "name": "Property 7",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    },
+    {
+      "name": "Property 8",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    },
+    {
+      "name": "Property 9",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    },
+    {
+      "name": "Property 10",
+      "price": "$2,100,000",
+      "details": "3 Beds, 1 Bath",
+      "area": "500 Sq Ft"
+    }
+  ]
+}

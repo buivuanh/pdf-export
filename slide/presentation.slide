@@ -1,0 +1,94 @@
+# Exporting PDFs using Playwright
+01 August 2024
+
+## Agenda
+
+1. Brief Introduction to Playwright
+2. Demo Code for Exporting PDF
+   - Part 1: Using HTML/CSS with Static Data
+   - Part 2: Using HTML with Go Template
+3. How Frontend Can Contribute to HTML/CSS for BE Team's PDF Rendering
+
+---
+
+## Brief Introduction to Playwright
+
+- Playwright is a Node.js library developed by Microsoft for automating web browsers.
+- Playwright allows us to interact with web pages in major browsers like Chromium, Firefox, Safari ...
+- Key features: multi-browser support, end-to-end Testing, headless mode, PDF Generation, screen Capture and Video Recording ...
+
+---
+
+## Demo Code for Exporting PDF
+   - Part 1: Using HTML/CSS with Static Data
+   - Part 2: Using HTML with Go Template
+
+## Part 1: Using HTML/CSS with Static Data
+
+- Example HTML and CSS
+
+.link ../html/static_data.html html
+.link ../html/styles.css css
+
+- Common print options
+
+.link ../html/header.html header
+.link ../html/footer.html footer
+
+```
+- Format/Page size: Letter, A3, A4 ...
+- Margin
+- Is Landscape
+```
+
+: ./pdf-export e -p=html -t=static_data.html
+
+## Part 1: Using HTML/CSS with Static Data
+
+.link img.png Result
+
+.image img.png
+
+## Part 2: Using HTML with Go Template
+
+.link ../html/template.html Go Template
+.image go_template.png
+
+.link ../html/data.json Data
+
+: ./pdf-export e -p=html -t=template.html -d=data.json
+
+## Demo Code for Exporting PDF
+
+**Capabilities and Limitations**
+
+**Capabilities**
+- Customizing headers and footers for different pages
+- Displaying watermarks in the background of each page
+- Limiting the number of items or rows per page
+- Setting page margins and orientation
+- Handling pagination and page breaks effectively
+
+**Limitations**
+- Cannot hide headers or footers for specific pages
+
+## How Frontend Can Contribute to HTML/CSS for BE Team's PDF Rendering
+
+**Step 1**: Create Static HTML Page
+
+: The Frontend team needs to create a static HTML page based on the design specifications.
+: (You can use the demo presented today to render the PDF yourself. We will provide a standalone tool for this purpose later.)
+
+**Step 2**: (Optionally) Create Template HTML Page Using Go Template
+
+: Frontend can also create a template HTML page using Go template syntax if needed.
+
+**Step 3**: Provide Resources
+
+- If using a static HTML page:
+Provide the BE team with all resources, including the example HTML page, CSS files, images, and printer options.
+
+- If using a Go template:
+Open a PR in the BE repository and push all related files and resources to it. We will specify the exact location for these files later.
+
+**Ideally**, We aim to have a unified CSS style and printer options for all PDF rendering to maintain consistency and ease of maintenance.
