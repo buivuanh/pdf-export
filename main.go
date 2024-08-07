@@ -138,8 +138,8 @@ func exportPDF(htmlData, headerData, footerData string) error {
 		Margin: &playwright.Margin{
 			Top:    playwright.String("40px"),
 			Bottom: playwright.String("40px"),
-			Left:   playwright.String("40px"),
-			Right:  playwright.String("40px"),
+			Left:   playwright.String("0px"),
+			Right:  playwright.String("0px"),
 		},
 	}
 
@@ -174,7 +174,7 @@ func readData(path string) (map[string]any, error) {
 }
 
 func executeHTMLTemplate(path, templateName, headerFile, footerFile, dataFile string) (htmlData, headerData, footerData string, err error) {
-	var pageData map[string]any
+	pageData := make(map[string]any)
 	if dataFile != "" {
 		pageData, err = readData(fmt.Sprintf("%s/%s", path, dataFile))
 		if err != nil {
@@ -200,7 +200,6 @@ func executeHTMLTemplate(path, templateName, headerFile, footerFile, dataFile st
 	err = templates.ExecuteTemplate(footer, footerFile, nil)
 	if err != nil {
 		return "", "", "", err
-
 	}
 
 	return html.String(), header.String(), footer.String(), nil

@@ -67,6 +67,103 @@ th {
     page-break-after: always;
 }
 
+/* Custom styles for the header and footer */
+/*.header {*/
+/*    font-size: 20px;*/
+/*    background-color: #4CAF50;*/
+/*    color: rebeccapurple;*/
+/*    position: running(header);*/
+/*}*/
+
+/*.footer {*/
+/*    font-size: 20px;*/
+/*    background-color: #4CAF50;*/
+/*    color: rebeccapurple;*/
+/*    position: running(footer);*/
+/*}*/
+
+/*@page {*/
+/*    !*margin: 60px 40px;*!*/
+/*    @top-center {*/
+/*        content: element(header);*/
+/*    }*/
+/*    @bottom-center {*/
+/*        content: element(footer);*/
+/*    }*/
+/*}*/
+
+/*.table-section {*/
+/*    page-break-inside: avoid;*/
+/*    margin-bottom: 500px;*/
+/*}*/
+
+/*@page {*/
+/*    margin: 10px;*/
+/*}*/
+
+@media print {
+    /*body {*/
+    /* This will override PagePdfOptions Margin*/
+    /*    margin: 0;*/
+    /*}*/
+
+    .content {
+        margin: 0 10mm;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        page-break-inside: avoid;
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    .block {
+        page-break-inside: avoid;
+    }
+
+    .table-section {
+        /*page-break-inside: avoid;*/
+        /*margin-bottom: 150mm;*/
+    }
+
+    footer {
+        font-size: 20px;
+        background-color: #4CAF50;
+        color: rebeccapurple;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    header {
+        font-size: 20px;
+        background-color: #4CAF50;
+        color: rebeccapurple;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Not work */
 /* Ensure maximum 5 block per page */
 /*.block:nth-of-type(5n) {*/
 /*    page-break-after: always;*/
@@ -75,3 +172,150 @@ th {
 /*.block:nth-child(5n) {*/
 /*    page-break-after: always;*/
 /*}*/
+
+/* Reset CSS */
+/** {*/
+/*    box-sizing: border-box;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: none;*/
+/*    text-decoration: none;*/
+/*    appearance: none;*/
+/*    background: none;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*}*/
+
+/*body {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
+
+/* Main Frame Styles */
+/*.frame {*/
+/*    width: 1280px;*/
+/*    height: 252px;*/
+/*    !*position: relative;*!*/
+/*    overflow: hidden;*/
+/*    !*margin: 0 auto;*!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/* Logo and Pattern Container */
+.logo {
+    opacity: 0.36000001430511475;
+    width: 487px;
+    height: 217px;
+    position: absolute;
+    left: calc(50% + 105px);
+    top: 22.5px;
+}
+
+.pattern-container {
+    width: 402px;
+    height: 217px;
+    position: absolute;
+    left: calc(50% - 281.5px);
+    top: 37px;
+    overflow: hidden;
+}
+
+.layer-1 {
+    height: auto;
+    position: absolute;
+    left: 32.04px;
+    top: 35px;
+    overflow: visible;
+}
+
+/* Content Container Styles */
+.content-container {
+    padding: 48px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section {
+    gap: 16px;
+}
+
+.right-section {
+    gap: 16px;
+}
+
+.agent-details, .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Profile Picture Styles */
+.profile-picture {
+    border-radius: 50%;
+    width: 156px;
+    height: 156px;
+    box-shadow: 0px 28px 56px 0px rgba(0, 0, 0, 0.16), 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    object-fit: cover;
+    object-position: top;
+}
+
+.agent-name {
+    color: #ffffff;
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 700;
+    max-width: 544px;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.job-title-text {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.phone-number {
+    color: #ffffff;
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.call-to-action {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* QR Code Container Styles */
+.qr-code-container {
+    width: 156px;
+    height: 156px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 16px 32px -4px rgba(153, 0, 51, 0.24), 0px 0px 2px 0px rgba(153, 0, 51, 0.64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
